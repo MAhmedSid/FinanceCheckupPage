@@ -10,7 +10,7 @@ const FinHealthCheckup = () => {
             Your Financial Health Checkup
           </h2>
           <div className="h-[27px] w-[25px] border-1 border-l-2 border-b-2 mr-3 ">
-            <img  className="" src="/arrow.svg" alt="chart_icon"/>
+            <img   src="/arrow.svg" alt="chart_icon"/>
           </div>
         </div>
         <DataField heading="Debt / Income ratio" data="10%" budgetBox={false} />
