@@ -7,7 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="flex items-center mt-28  bg-[#404EED]">
-      <div className="flex justify-around gap-6 ml-10  font-medium text-base leading-6 text-white">
+      <div className="flex justify-around gap-4 ml-8  font-medium text-base leading-6 text-white">
         <a href="#" className="hover:bg-white hover:bg-opacity-20 hover:font-semibold py-1 px-3 rounded-md transition ease-in-out duration-300" >About</a>
         <a href="#" className="hover:bg-white hover:bg-opacity-20 hover:font-semibold py-1 px-3 rounded-md transition ease-in-out duration-300" >Contact</a>
         <a href="#" className="hover:bg-white hover:bg-opacity-20 hover:font-semibold py-1 px-3 rounded-md transition ease-in-out duration-300" >Button</a>

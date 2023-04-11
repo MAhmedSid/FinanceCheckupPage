@@ -4,8 +4,8 @@ import { ResponsiveContainer, PieChart, Pie, Cell, LabelList } from "recharts";
 const data = [
   { name: "Monthly Debt pmt (credit card, car etc),$1000", value: 10 },
   { name: "Monthly Expenses,$3000", value: 30 },
-  { name: "Monthly Slack,$4000", value: 40 },
-  { name: "Housing or Rent,Tax, Insurance,$2000", value: 20 },
+  { name: "Monthly Slack,$4000", value: 20 },
+  { name: "Housing or Rent,Tax, Insurance,$2000", value: 40 },
 ];
 
 const renderInsideLabel = ({
@@ -24,10 +24,9 @@ const renderInsideLabel = ({
       x={x}
       y={y}
       fill="white"
-      fontSize="36px"
+      fontSize="26px"
       fontWeight="700"
-      style={{ lineHeight: "54px" }}
-      textAnchor={x > cx ? "middle" : "middle"}
+      textAnchor={x > cx ? "start" : "middle"}
       dominantBaseline="central"
     >
       {`${(percent * 100).toFixed(0)}%`}
@@ -65,13 +64,14 @@ const dataPieChart = () => {
           ))}
 
           <LabelList
+          
             className="label-list"
-            offset={30}
+            offset={50}
             dataKey="name"
-            maxWidth={100}
             position="outside"
             tickLine={false}
-            fill="#232323"
+            fill="#232323" 
+              
           />
         </Pie>
       </PieChart>

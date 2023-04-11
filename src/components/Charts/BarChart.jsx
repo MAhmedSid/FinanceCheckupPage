@@ -102,21 +102,25 @@ const Chart = () => {
         />
         <ReferenceLine y={newWorth} stroke="#219F94" strokeOpacity={1}>
           <Label
-            value={`Net Worth `}
-            dx={680}
-            position="top"
+            value={`Networth `}
+          
+            dx={-40}
+            dy={-10}
+            position="insideTopRight"
             fill="#219F94"
-            offset={30}
-            style={{ fontSize: "14px", fontWeight: "700", textAnchor: "end" }}
+            offset={-40}
+            style={{ fontSize: "14px", fontWeight: "700", textAnchor:"end" }}
           />
         </ReferenceLine>
         <ReferenceLine y={newWorth} stroke="#219F94" strokeOpacity={1}>
           <Label
             value={`$${newWorth.toLocaleString()}`}
-            dx={670}
-            position="top"
+          
+            dx={-19}
+            dy={-10}
+            position="insideTopRight"
             fill="#219F94"
-            offset={10}
+            offset={-20}
             style={{ fontSize: "14px", fontWeight: "700", textAnchor: "end" }}
           />
         </ReferenceLine>
