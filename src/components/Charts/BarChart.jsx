@@ -103,19 +103,17 @@ const Chart = () => {
         <ReferenceLine y={newWorth} stroke="#219F94" strokeOpacity={1}>
           <Label
             value={`Networth `}
-          
             dx={-40}
             dy={-10}
             position="insideTopRight"
             fill="#219F94"
             offset={-40}
-            style={{ fontSize: "14px", fontWeight: "700", textAnchor:"end" }}
+            style={{ fontSize: "14px", fontWeight: "700", textAnchor: "end" }}
           />
         </ReferenceLine>
         <ReferenceLine y={newWorth} stroke="#219F94" strokeOpacity={1}>
           <Label
             value={`$${newWorth.toLocaleString()}`}
-          
             dx={-19}
             dy={-10}
             position="insideTopRight"

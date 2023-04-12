@@ -10,13 +10,25 @@ const FinHealthCheckup = () => {
             Your Financial Health Checkup
           </h2>
           <div className="h-[27px] w-[25px] border-1 border-l-2 border-b-2 mr-3 ">
-            <img   src="/arrow.svg" alt="chart_icon"/>
+            <img src="/arrow.svg" alt="chart_icon" />
           </div>
         </div>
         <DataField heading="Debt / Income ratio" data="10%" budgetBox={false} />
-        <DataField heading="Expense coverage ratio by savings" data="8.33" budgetBox={false} />
-        <DataField heading="Assets / Liabilities" data="23%" budgetBox={false} />
-        <DataField heading="Assets / (Rent + Debt) coverage" data="1667%" budgetBox={false} />
+        <DataField
+          heading="Expense coverage ratio by savings"
+          data="8.33"
+          budgetBox={false}
+        />
+        <DataField
+          heading="Assets / Liabilities"
+          data="23%"
+          budgetBox={false}
+        />
+        <DataField
+          heading="Assets / (Rent + Debt) coverage"
+          data="1667%"
+          budgetBox={false}
+        />
         <DataField heading="Housing cost ratio" data="20%" budgetBox={false} />
         <DataField heading="Slack in Budget" data="$2000" budgetBox={true} />
       </div>

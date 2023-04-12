@@ -1,4 +1,4 @@
-import React,{useRef,useState,useEffect} from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { ResponsiveContainer, PieChart, Pie, Cell, LabelList } from "recharts";
 
 const data = [
@@ -37,11 +37,9 @@ const renderInsideLabel = ({
 const COLORS = ["#219F94", "#6772f1", "#a3aaf6", "#c2c7f9"];
 
 const dataPieChart = () => {
-
   return (
     <>
-      
-      <div  style={{ width: "100%", height: "100%" }}>
+      <div style={{ width: "100%", height: "100%" }}>
         <ResponsiveContainer
           width="100%"
           height="100%"

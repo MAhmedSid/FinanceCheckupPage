@@ -3,10 +3,7 @@ import PieChart from "../Charts/PieChart";
 import Remarks from "./Remarks";
 
 const Analysis = () => {
-
-
-
-  const [isPos, setIsPos] = useState(true)
+  const [isPos, setIsPos] = useState(true);
   const containerRef = useRef(null);
   const [containerDimensions, setContainerDimensions] = useState({
     width: 0,
@@ -45,7 +42,12 @@ const Analysis = () => {
         </h2>
 
         <div ref={containerRef} className="relative h-[30rem] w-[60rem] mt-5 ">
-          <button onClick={()=>{setIsPos(!isPos)}} className="z-10 absolute h-9 w-12 rounded-md bg-[#404EED] top-[18rem] left-[10rem]">
+          <button
+            onClick={() => {
+              setIsPos(!isPos);
+            }}
+            className="z-10 absolute h-9 w-12 rounded-md bg-[#404EED] top-[18rem] left-[10rem]"
+          >
             {isPos ? "+ve" : "-ve"}
           </button>
           <div
@@ -57,7 +59,7 @@ const Analysis = () => {
               top: borderPosition.top,
             }}
           />
-          <PieChart />
+          <PieChart/>
         </div>
       </div>
       <div className="flex-[0.5]  mt-[89px]">
