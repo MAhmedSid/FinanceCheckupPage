@@ -23,7 +23,7 @@ function App() {
           <FinHealthCheckup />
         </div>
         <Analysis />
-        <ComparisonC />
+        <ComparisonC />    
         <RoutingC />
         <Footer />
       </div>

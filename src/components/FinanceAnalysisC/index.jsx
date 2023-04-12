@@ -1,8 +1,42 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import PieChart from "../Charts/PieChart";
 import Remarks from "./Remarks";
 
 const Analysis = () => {
+
+
+
+  const [isPos, setIsPos] = useState(true)
+  const containerRef = useRef(null);
+  const [containerDimensions, setContainerDimensions] = useState({
+    width: 0,
+    height: 0,
+  });
+
+  const { width: containerWidth, height: containerHeight } =
+    containerDimensions;
+  const borderSize = Math.min(containerWidth, containerHeight) * 0.73;
+  const borderPosition = {
+    left: containerWidth / 2 - borderSize / 2,
+    top: containerHeight / 2 - borderSize / 2.4,
+  };
+  useEffect(() => {
+    const container = containerRef.current;
+    const { width, height } = container.getBoundingClientRect();
+    setContainerDimensions({ width, height });
+
+    const handleResize = () => {
+      const { width, height } = container.getBoundingClientRect();
+      setContainerDimensions({ width, height });
+    };
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [borderSize]);
+
   return (
     <div className="flex flex-row">
       <div className="h-96 w-96 flex-[0.7] flex items-center flex-col">
@@ -10,10 +44,20 @@ const Analysis = () => {
           Monthly Expenses vs Savings
         </h2>
 
-        <div className="relative mt-5">
-          <div className=" h-[30rem] w-[60rem]">
-            <PieChart />
-          </div>
+        <div ref={containerRef} className="relative h-[30rem] w-[60rem] mt-5 ">
+          <button onClick={()=>{setIsPos(!isPos)}} className="z-10 absolute h-9 w-12 rounded-md bg-[#404EED] top-[18rem] left-[10rem]">
+            {isPos ? "+ve" : "-ve"}
+          </button>
+          <div
+            className="absolute border-opacity-[15%] border-[#404EED] border-[14px] rounded-full"
+            style={{
+              width: borderSize,
+              height: borderSize,
+              left: borderPosition.left,
+              top: borderPosition.top,
+            }}
+          />
+          <PieChart />
         </div>
       </div>
       <div className="flex-[0.5]  mt-[89px]">

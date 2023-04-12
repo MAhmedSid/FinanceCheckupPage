@@ -18,12 +18,6 @@ input[type=number] {
     outline: none;
   }
 
-  .label-list text{
-    max-width: 100px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 
 @layer base {
     html {
